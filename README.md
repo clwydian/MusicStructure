@@ -34,9 +34,11 @@ It crashes at present.  I have put in a series of log entries to try and see whe
 03-31 15:53:25.573 4383-4383/com.example.android.musicstructure I/getmArtist: Song: mArtist value =Eric Blurgh
 03-31 15:53:25.573 4383-4383/com.example.android.musicstructure I/songadaptor: artist settxt and currentSong.getrtist() is Eric Blurgh
 03-31 15:53:54.360 4383-4383/com.example.android.musicstructure I/getmArtist: Song: mArtist value =Eric Blurgh
+
 03-31 15:53:54.396 4383-4383/com.example.android.musicstructure E/AndroidRuntime: FATAL EXCEPTION: main
                                                                                   Process: com.example.android.musicstructure, PID: 4383
                                                                                   java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+                                                                                      
                                                                                       at com.example.android.musicstructure.SongAdaptor.getView(SongAdaptor.java:54)
                                                                                       at android.widget.AbsListView.obtainView(AbsListView.java:2434)
                                                                                       at android.widget.ListView.makeAndAddView(ListView.java:1970)
