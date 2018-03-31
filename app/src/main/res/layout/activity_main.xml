@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="40dp"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicstructure.MainActivity">
+
+    <TextView
+        android:id="@+id/red_chillax"
+        style="@style/LightStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/red_tunes"
+        android:text="@string/red_section" />
+
+    <TextView
+        android:id="@+id/amber_cooldown"
+        style="@style/LightStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/amber_tunes"
+        android:text="@string/amber_section" />
+
+    <TextView
+        android:id="@+id/green_goforit"
+        style="@style/LightStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green_tunes"
+        android:text="@string/green_section" />
+
+    <TextView
+        android:id="@+id/settings"
+        style="@style/LightStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/settings"
+        android:text="@string/settings_section" />
+
+</LinearLayout>
