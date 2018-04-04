@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--xml layout for the player emulator-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/thePlayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/NowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:alpha="0.7"
+        android:gravity="center_horizontal"
+        android:text="@string/NowPlaying"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/playing_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:text="@string/Title"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="@string/by"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/playing_artist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:text="@string/Artist"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/playing_duration"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:text="@string/Duration"
+        android:textSize="30dp" />
+
+</LinearLayout>

@@ -23,10 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-
         // Find the View that shows the red category
         TextView redSongs = findViewById(R.id.red_chillax);
-
         // Set a click listener on that View object
         redSongs.setOnClickListener(new OnClickListener() {
             // The code in this othereise abstract method will be executed when the numbers category is clicked on.
@@ -39,32 +37,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TextView family = findViewById(R.id.amber_cooldown);
-        family.setOnClickListener(new OnClickListener() {
+        // same for amber
+        TextView amberSongs = findViewById(R.id.amber_cooldown);
+        amberSongs.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent familyIntent = new Intent(MainActivity.this, AmberCooldown.class);
-                startActivity(familyIntent);
+                Intent amberIntent = new Intent(MainActivity.this, AmberCooldown.class);
+                startActivity(amberIntent);
             }
         });
 
-        TextView colors = findViewById(R.id.green_goforit);
-        colors.setOnClickListener(new OnClickListener() {
+        // again for green
+        TextView greenSongs = findViewById(R.id.green_goforit);
+        greenSongs.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent colorsIntent = new Intent(MainActivity.this, GreenGoForIt.class);
-                startActivity(colorsIntent);
+                Intent greenIntent = new Intent(MainActivity.this, GreenGoForIt.class);
+                startActivity(greenIntent);
             }
         });
 
-        TextView phrases = findViewById(R.id.settings);
-        phrases.setOnClickListener(new OnClickListener() {
+        // and for the helpscreen textview panel
+        TextView settingsClick = findViewById(R.id.settings);
+        settingsClick.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent phrasesIntent = new Intent(MainActivity.this, Settings.class);
-                startActivity(phrasesIntent);
+                Intent settingsIntent = new Intent(MainActivity.this, Settings.class);
+                startActivity(settingsIntent);
             }
         });
     }
-
 }

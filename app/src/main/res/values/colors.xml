@@ -2,23 +2,23 @@
 
 <resources>
     <!-- Primary color of the app (shown in the app bar) -->
-    <color name="primary_color">#4A312A</color>
+    <color name="primary_color">#FFFFFF</color>
 
     <!-- Primary dark color of the app (shown in the status bar) -->
     <color name="primary_dark_color">#2F1D1A</color>
 
     <!-- Background color for app -->
-    <color name="blue_background">#00CCCC</color>
+    <color name="blue_background">#16AFCA</color>
 
     <!-- Background color for the redcategory -->
-    <color name="red_tunes">#FF0000</color>
+    <color name="red_tunes">#B90303</color>
 
     <!-- Background color for the amber members category -->
-    <color name="amber_tunes">#FF8000</color>
+    <color name="amber_tunes">#B37436</color>
 
     <!-- Background color for the green category -->
-    <color name="green_tunes">#009900</color>
+    <color name="green_tunes">#109C00</color>
 
     <!-- Background color for the settings category -->
-    <color name="settings">#16AFCA</color>
+    <color name="settings">#0803AB</color>
 </resources>

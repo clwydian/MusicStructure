@@ -2,10 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="40dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/amber_tunes"
     android:orientation="vertical"
     tools:context="com.example.android.musicstructure.MainActivity">
 
+    <!--Five text views acting as touch pads-->
     <TextView
         android:id="@+id/red_chillax"
         style="@style/LightStyle"
@@ -13,7 +15,9 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/red_tunes"
-        android:text="@string/red_section" />
+        android:gravity="center"
+        android:text="@string/red_activity"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/amber_cooldown"
@@ -22,7 +26,9 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/amber_tunes"
-        android:text="@string/amber_section" />
+        android:gravity="center"
+        android:text="@string/amber_activity"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/green_goforit"
@@ -31,7 +37,9 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/green_tunes"
-        android:text="@string/green_section" />
+        android:gravity="center"
+        android:text="@string/green_activity"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/settings"
@@ -40,6 +48,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/settings"
-        android:text="@string/settings_section" />
+        android:gravity="center"
+        android:text="@string/settings_activity"
+        android:textSize="20dp" />
 
 </LinearLayout>

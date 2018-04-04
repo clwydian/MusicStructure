@@ -1,9 +1,16 @@
 package com.example.android.musicstructure;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,42 +23,51 @@ public class RedChillax extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.music_list);
+        setContentView(R.layout.music_list_red);
 
-        // Create a list of songs  Artist - Title - Duration
+        // Create an ArrayList of Song objects   Artist - Title - Duration and fill it
         ArrayList<Song> songlist = new ArrayList<Song>();
-//        words.add("one");
-        songlist.add(new Song("Eric Blurgh", "I crossed a river", "205"));
+        songlist.add(new Song("Alfred Bryan", "Cherie Chilly-Pom-Pom-Pee", "1min"));
+        songlist.add(new Song("Bob Dylan", "Everybody must get stoned", "2min"));
+        songlist.add(new Song("Billy Hart", "Check-Mated And Bingoed", "3min"));
+        songlist.add(new Song("Buddy Sharpe", "Three Eyed Man", "4min"));
+        songlist.add(new Song("C+C Music Factory", "Things That Make You Go Hmmmm", "5min"));
+        songlist.add(new Song("Carl Phillips", "Wig wam Willie", "10min"));
+        songlist.add(new Song("Charlie Gore", "You Ain't Nothin' But A Female Hound Dog", "15mins"));
+        songlist.add(new Song("Chuck Bowers", "Blabber Mouth Sidewalk Stroll", "20min"));
 
-//        Is exactly the same as
-//        Word w = new Word("one","lutti");
-//        words.add(w);
-
-        songlist.add(new Song("Torvil Wunerbro", "Dream on, but not on the motorway", "178"));
-        songlist.add(new Song("Scream Trio", "My ice cream is melting for you", "403"));
-        songlist.add(new Song("Scream quat", "Who likes ice cream", "404"));
-        songlist.add(new Song("Scream think", "Tuttifrutti", "405"));
-        songlist.add(new Song("Scream sextant", "Raining again", "406"));
-        songlist.add(new Song("Scream siezes", "Slobber doober", "407"));
-
-        // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
-        // adapter knows how to create layouts for each item in the list, using the
-        // simple_list_item_1.xml layout resource defined in the Android framework.
-        // This list item layout contains a single {@link TextView}, which the adapter will set to
-        // display a single word.
-        Log.i("red chillax", "just calling adapter after adding last song");
-
+        // Construct a SongAdaptor for the songlist
         SongAdaptor adapter = new SongAdaptor(this, songlist);
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // music_list.xml file.
-        ListView listView = findViewById(R.id.music_listview);
+        //  Make a ListView from music_Listview_red instructions
+        ListView listView = findViewById(R.id.music_listview_red);
 
-        // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
-        // {@link ListView} will display list items for each word in the list of words.
-        // Do this by calling the setAdapter method on the {@link ListView} object and pass in
-        // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+        //  Tell the adaptor which listview to use
         listView.setAdapter(adapter);
+
+        // setOnItemClickListener for screen touch to 'pick a mix'
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                //  create textviews from the xml and fill from the selected mix
+                TextView textView1 = view.findViewById(R.id.artist_text_view);
+                String artistout = textView1.getText().toString();
+                TextView textView2 = view.findViewById(R.id.title_text_view);
+                String titleout = textView2.getText().toString();
+                TextView textView3 = view.findViewById(R.id.duration_text_view);
+                String durationout = textView3.getText().toString();
+
+                //  Create a new intent to open the player activity with extras}
+                Intent nowPlaying = new Intent(RedChillax.this, PlayItSam.class);
+                Bundle extras = new Bundle();
+                extras.putString("artistplay", artistout);
+                extras.putString("titleplay", titleout);
+                extras.putString("durationplay", durationout);
+                nowPlaying.putExtras(extras);
+                startActivity(nowPlaying);
+            }
+        });
     }
 }
