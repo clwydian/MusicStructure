@@ -17,7 +17,7 @@
         android:background="@color/red_tunes"
         android:gravity="center"
         android:text="@string/red_activity"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/amber_cooldown"
@@ -28,7 +28,7 @@
         android:background="@color/amber_tunes"
         android:gravity="center"
         android:text="@string/amber_activity"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/green_goforit"
@@ -39,7 +39,7 @@
         android:background="@color/green_tunes"
         android:gravity="center"
         android:text="@string/green_activity"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/settings"
@@ -50,6 +50,6 @@
         android:background="@color/settings"
         android:gravity="center"
         android:text="@string/settings_activity"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
 </LinearLayout>

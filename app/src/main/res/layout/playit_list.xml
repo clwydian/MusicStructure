@@ -16,7 +16,7 @@
         android:alpha="0.7"
         android:gravity="center_horizontal"
         android:text="@string/NowPlaying"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/playing_title"
@@ -25,7 +25,7 @@
         android:layout_weight="3"
         android:gravity="center_horizontal"
         android:text="@string/Title"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
         android:layout_weight="1"
         android:gravity="center_horizontal"
         android:text="@string/by"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/playing_artist"
@@ -42,7 +42,7 @@
         android:layout_weight="3"
         android:gravity="center_horizontal"
         android:text="@string/Artist"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/playing_duration"
@@ -51,6 +51,6 @@
         android:layout_weight="3"
         android:gravity="center_horizontal"
         android:text="@string/Duration"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
 </LinearLayout>
